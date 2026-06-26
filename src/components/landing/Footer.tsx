@@ -62,7 +62,7 @@ export function Footer() {
         <div className={styles.footerBrand}>
           <Logo />
           <p className={styles.footerDesc}>
-            La plataforma de logística que conecta comercios y domiciliarios en toda Colombia.
+            La plataforma de logística que conecta comercios y conductores en toda Colombia.
           </p>
           <div className={styles.socials}>
             {SOCIALS.map((s) => (

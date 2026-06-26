@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Cometta — Entregas que tus clientes recuerdan",
   description:
-    "Cometta es la plataforma de logística que conecta comercios y domiciliarios en toda Colombia. Despacha, rastrea y entrega desde un solo panel.",
+    "Cometta es la plataforma de logística que conecta comercios y conductores en toda Colombia. Despacha, rastrea y entrega desde un solo panel.",
 };
 
 export default function RootLayout({

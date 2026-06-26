@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Audience } from "./types";
 import styles from "./landing.module.css";
 
@@ -24,13 +25,13 @@ function DriversCopy() {
       <span className={styles.badge}>Para conductores</span>
       <h1 className={styles.heroTitle}>Gana en cada entrega, a tu ritmo.</h1>
       <p className={styles.heroText}>
-        Únete a la red de domiciliarios de Cometta. Recibe pedidos cerca de ti y cobra
+        Únete a la red de conductores de Cometta. Recibe pedidos cerca de ti y cobra
         rápido, con horarios que tú eliges.
       </p>
       <div className={styles.heroCtas}>
-        <a href="#" className={styles.btnPrimary}>
-          Quiero ser domiciliario
-        </a>
+        <Link href="/quiero-ser-conductor" className={styles.btnPrimary}>
+          Quiero ser conductor
+        </Link>
         <a href="#" className={styles.btnSecondary}>
           Ver cómo funciona
         </a>
@@ -51,7 +52,7 @@ function CompaniesCopy() {
       <h1 className={styles.heroTitle}>Entregas que tus clientes recuerdan.</h1>
       <p className={styles.heroText}>
         Despacha, rastrea y entrega desde un solo panel. Conecta tu comercio con la red de
-        domiciliarios de Cometta, sin montar tu propia flota.
+        conductores de Cometta, sin montar tu propia flota.
       </p>
       <div className={styles.heroCtas}>
         <a href="#" className={styles.btnPrimary}>

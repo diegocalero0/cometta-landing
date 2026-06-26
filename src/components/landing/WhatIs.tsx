@@ -70,7 +70,7 @@ const COMPANY_FEATURES: Feature[] = [
     title: "Panel de operaciones",
     text: "Crea, asigna y monitorea cada pedido desde un solo lugar, en tiempo real.",
   },
-  { icon: PinIcon, title: "Rastreo en vivo", text: "Sigue a cada domiciliario en el mapa y comparte el estado con tus clientes." },
+  { icon: PinIcon, title: "Rastreo en vivo", text: "Sigue a cada conductor en el mapa y comparte el estado con tus clientes." },
   {
     icon: (
       <svg {...iconProps}>
@@ -80,7 +80,7 @@ const COMPANY_FEATURES: Feature[] = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Red de domiciliarios",
+    title: "Red de conductores",
     text: "Accede a miles de repartidores verificados sin contratar flota propia.",
   },
   {
@@ -108,7 +108,7 @@ export function WhatIs({ audience }: { audience: Audience }) {
             <>
               <h2 className={styles.sectionTitle}>La app que convierte tu moto en ingresos.</h2>
               <p className={styles.sectionLede}>
-                Cometta conecta a domiciliarios con miles de comercios. Conéctate cuando
+                Cometta conecta a conductores con miles de comercios. Conéctate cuando
                 quieras, recibe pedidos cercanos y gana por cada entrega.
               </p>
             </>
@@ -116,7 +116,7 @@ export function WhatIs({ audience }: { audience: Audience }) {
             <>
               <h2 className={styles.sectionTitle}>La plataforma de logística para tu comercio.</h2>
               <p className={styles.sectionLede}>
-                Cometta conecta tu negocio con una red de domiciliarios verificados para
+                Cometta conecta tu negocio con una red de conductores verificados para
                 entregar más rápido, con cobertura nacional y sin montar tu propia flota.
               </p>
             </>

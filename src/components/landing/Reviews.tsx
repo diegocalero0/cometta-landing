@@ -8,19 +8,19 @@ const DRIVER_REVIEWS: Review[] = [
     text: "“Me organizo el día como quiero y los pagos llegan rapidísimo. Llevo seis meses y no me cambio.”",
     initials: "JR",
     name: "Julián Ramírez",
-    role: "Domiciliario · Medellín",
+    role: "Conductor · Medellín",
   },
   {
     text: "“Los pedidos siempre están cerca, no pierdo tiempo dando vueltas por la ciudad.”",
     initials: "CM",
     name: "Carlos Mejía",
-    role: "Domiciliario · Bogotá",
+    role: "Conductor · Bogotá",
   },
   {
     text: "“El soporte responde y el seguro me da tranquilidad en la calle. Se siente serio.”",
     initials: "DR",
     name: "Daniela Ríos",
-    role: "Domiciliaria · Cali",
+    role: "Conductora · Cali",
   },
 ];
 
@@ -32,7 +32,7 @@ const COMPANY_REVIEWS: Review[] = [
     role: "Gerente · Mercaluna",
   },
   {
-    text: "“Pasamos de tener flota propia a despachar con domiciliarios verificados. Más cobertura, menos costos.”",
+    text: "“Pasamos de tener flota propia a despachar con conductores verificados. Más cobertura, menos costos.”",
     initials: "AP",
     name: "Andrés Patiño",
     role: "Operaciones · Andina Foods",

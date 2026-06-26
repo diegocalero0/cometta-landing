@@ -1,0 +1,197 @@
+/* ============================================================
+   /quiero-ser-conductor — formulario de postulación (mobile-first)
+   Reutiliza los tokens del design system en globals.css.
+   ============================================================ */
+
+.page {
+  min-height: 100vh;
+  background: var(--surface-page);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: var(--gray-0);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.headerInner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.backLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.backLink:hover { color: var(--brand-purple); }
+
+/* ---------- Main ---------- */
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+@media (min-width: 640px) {
+  .main { padding: 48px 32px 72px; }
+}
+
+.intro { margin-bottom: 24px; }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 12px;
+  background: var(--brand-purple-soft);
+  color: var(--brand-purple-active);
+  border: 1px solid var(--brand-purple-border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.title {
+  margin: 14px 0 0;
+  font-size: clamp(28px, 7vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-strong);
+}
+.lede {
+  margin: 12px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+/* ---------- Card + form ---------- */
+.card {
+  background: var(--gray-0);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+@media (min-width: 640px) {
+  .card { padding: 32px; }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+.req { color: var(--danger); }
+.optional { color: var(--text-subtle); font-weight: 400; }
+
+.control {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-strong);
+  background: var(--gray-0);
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  transition: border-color 150ms var(--ease-standard), box-shadow 150ms var(--ease-standard);
+  appearance: none;
+}
+.control::placeholder { color: var(--text-subtle); }
+.control:hover { border-color: var(--border-strong); }
+.control:focus-visible {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: var(--focus-ring);
+}
+select.control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23868e96' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+/* Teléfono: indicativo + número */
+.phoneRow {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 10px;
+}
+.countrySelect { padding-right: 32px; }
+
+.error {
+  color: var(--danger);
+  font-size: 14px;
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 24px;
+  margin-top: 4px;
+  background: var(--brand-purple);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 150ms var(--ease-standard);
+}
+.btnPrimary:hover { background: var(--brand-purple-hover); }
+.btnPrimary:disabled { opacity: 0.6; cursor: default; }
+
+/* ---------- Estado de éxito ---------- */
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 16px 8px;
+}
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--brand-green-soft);
+  color: var(--brand-green-ink);
+  margin-bottom: 4px;
+}
+.successTitle { font-size: 22px; color: var(--text-strong); }
+.successText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-body);
+  max-width: 380px;
+}
+.success .btnPrimary { margin-top: 12px; }

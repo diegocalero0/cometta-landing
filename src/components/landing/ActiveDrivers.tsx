@@ -19,7 +19,7 @@ export function ActiveDrivers() {
             </span>
             <div className={styles.activeCounter}>12.480</div>
             <p className={styles.activeText}>
-              Domiciliarios conectados ahora mismo, entregando en 48 ciudades del país. Únete y
+              Conductores conectados ahora mismo, entregando en 48 ciudades del país. Únete y
               empieza a recibir pedidos hoy.
             </p>
             <div className={styles.activeStats}>
