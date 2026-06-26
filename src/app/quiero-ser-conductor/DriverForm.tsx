@@ -40,7 +40,9 @@ export function DriverForm({ cities }: { cities: City[] }) {
     setSubmitting(true);
     setError(null);
 
-    const res = await fetch("/api/driver-applications", {
+    // basePath no se aplica a fetch() automáticamente: lo anteponemos a mano.
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+    const res = await fetch(`${base}/api/driver-applications`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
