@@ -1,0 +1,24 @@
+# ============================================================
+# Cometta Landing — docker-compose
+# Mapea el puerto interno 3000 al 3005 del servidor.
+# La base de datos corre en otro contenedor (cometta_production_database)
+# conectado a la red externa "cometta_shared_network". Nos unimos a ella
+# para alcanzarla por el nombre del servicio: postgres:5432.
+# ============================================================
+services:
+  landing:
+    build: .
+    container_name: cometta-landing
+    ports:
+      - "3005:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - cometta_shared_network
+
+networks:
+  cometta_shared_network:
+    # external: la red ya existe (la crea el compose de la base de datos).
+    external: true
+    name: cometta_shared_network

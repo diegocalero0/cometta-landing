@@ -1,0 +1,230 @@
+/* ============================================================
+   COMETTA LANDING — DESIGN SYSTEM TOKENS
+   Copiados del design system de Cometta (mismos tokens que el
+   backoffice). Light mode only. Neutral-first + acentos
+   púrpura/verde.
+   ============================================================ */
+:root {
+  /* ---- Brand ---------------------------------------------- */
+  --brand-purple: #7c3aed;
+  --brand-purple-hover: #6d28d9;
+  --brand-purple-active: #5b21b6;
+  --brand-purple-soft: #f3effe;
+  --brand-purple-border: #e4d9fb;
+
+  --brand-green: #4ade2a;
+  --brand-green-ink: #2f8f17;
+  --brand-green-hover: #3fc322;
+  --brand-green-soft: #effbe9;
+  --brand-green-border: #d4f3c6;
+
+  /* ---- Neutral scale (true gray) -------------------------- */
+  --gray-0:  #ffffff;
+  --gray-25: #fcfcfd;
+  --gray-50: #f8f9fa;
+  --gray-100:#f1f3f5;
+  --gray-150:#e9ecef;
+  --gray-200:#dee2e6;
+  --gray-300:#ced4da;
+  --gray-400:#adb5bd;
+  --gray-500:#868e96;
+  --gray-600:#6b7280;
+  --gray-700:#495057;
+  --gray-800:#343a40;
+  --gray-900:#212529;
+  --gray-950:#16191d;
+
+  /* ---- Semantic status ------------------------------------ */
+  --success:        #2f8f17;
+  --success-soft:   #effbe9;
+  --success-border: #d4f3c6;
+
+  --warning:        #b25e09;
+  --warning-soft:   #fdf3e7;
+  --warning-border: #f6dcb8;
+
+  --danger:         #d92d20;
+  --danger-soft:    #fef0ef;
+  --danger-border:  #f8cfcb;
+  --danger-hover:   #b42318;
+
+  --info:           #1570cd;
+  --info-soft:      #eef6fe;
+  --info-border:    #c9e2f9;
+
+  /* ---- Semantic aliases ----------------------------------- */
+  --surface-page:    var(--gray-50);
+  --surface-card:    var(--gray-0);
+  --surface-sunken:  var(--gray-100);
+  --surface-hover:   var(--gray-50);
+  --surface-active:  var(--brand-purple-soft);
+
+  --text-strong:   var(--gray-900);
+  --text-body:     var(--gray-700);
+  --text-muted:    var(--gray-500);
+  --text-subtle:   var(--gray-400);
+  --text-on-brand: var(--gray-0);
+  --text-link:     var(--brand-purple);
+
+  --border-subtle: var(--gray-150);
+  --border-default:var(--gray-200);
+  --border-strong: var(--gray-300);
+  --border-focus:  var(--brand-purple);
+
+  --action-bg:        var(--brand-purple);
+  --action-bg-hover:  var(--brand-purple-hover);
+  --action-bg-active: var(--brand-purple-active);
+  --action-fg:        var(--gray-0);
+
+  --focus-ring: 0 0 0 3px rgba(124, 58, 237, 0.22);
+
+  /* ---- Typography ----------------------------------------- */
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono",
+               Menlo, Consolas, monospace;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --fs-display: 32px;
+  --fs-h1:      24px;
+  --fs-h2:      20px;
+  --fs-h3:      17px;
+  --fs-body:    14px;
+  --fs-sm:      13px;
+  --fs-xs:      12px;
+  --fs-2xs:     11px;
+
+  --lh-tight:   1.2;
+  --lh-snug:    1.35;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --ls-tight:   -0.02em;
+  --ls-snug:    -0.01em;
+  --ls-normal:  0;
+  --ls-wide:    0.04em;
+
+  /* ---- Spacing (4px base) --------------------------------- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ---- Radius --------------------------------------------- */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows -------------------------------------------- */
+  --shadow-xs:  0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-sm:  0 1px 3px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-md:  0 4px 8px -2px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
+  --shadow-lg:  0 12px 24px -6px rgba(16, 24, 40, 0.12), 0 4px 8px -4px rgba(16, 24, 40, 0.06);
+  --shadow-pop: 0 16px 32px -8px rgba(16, 24, 40, 0.18);
+
+  /* ---- Layout --------------------------------------------- */
+  --container-max: 1200px;
+
+  /* ---- Motion --------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 260ms;
+
+  /* ---- Z-index -------------------------------------------- */
+  --z-sticky: 100;
+  --z-overlay: 800;
+  --z-modal: 900;
+  --z-toast: 1000;
+}
+
+/* ============================================================
+   BASE — reset + element defaults
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
+  /* Evita el scroll horizontal en móvil. */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text-strong);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-snug);
+}
+
+p { margin: 0; }
+
+a { color: var(--text-link); text-decoration: none; }
+
+button { font-family: inherit; }
+
+.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+.mono { font-family: var(--font-mono); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+::selection { background: var(--brand-purple-soft); color: var(--brand-purple-active); }
+
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-sm); }
+
+/* ============================================================
+   KEYFRAMES — usados por la landing (punto pulsante + modal)
+   ============================================================ */
+@keyframes cmt-pulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(2.4); opacity: 0;   }
+  100% { transform: scale(2.4); opacity: 0;   }
+}
+
+@keyframes cmt-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes cmt-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
