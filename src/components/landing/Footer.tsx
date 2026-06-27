@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import styles from "./landing.module.css";
 
@@ -7,6 +8,12 @@ const COLUMNS: { title: string; links: string[] }[] = [
   { title: "Compañía", links: ["Sobre Cometta", "Trabaja con nosotros", "Blog", "Contacto"] },
   { title: "Legal", links: ["Términos y condiciones", "Política de privacidad", "Política de cookies"] },
 ];
+
+// Destinos reales para los enlaces que ya tienen página (el resto queda en "#").
+const LINK_HREFS: Record<string, string> = {
+  "Política de privacidad": "/politica-de-privacidad",
+  Privacidad: "/politica-de-privacidad",
+};
 
 const SOCIALS: { label: string; icon: ReactNode }[] = [
   {
@@ -77,13 +84,21 @@ export function Footer() {
           <div key={col.title}>
             <div className={styles.footerColTitle}>{col.title}</div>
             <ul className={styles.footerLinks}>
-              {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className={styles.footerLink}>
-                    {l}
-                  </a>
-                </li>
-              ))}
+              {col.links.map((l) =>
+                LINK_HREFS[l] ? (
+                  <li key={l}>
+                    <Link href={LINK_HREFS[l]} className={styles.footerLink}>
+                      {l}
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={l}>
+                    <a href="#" className={styles.footerLink}>
+                      {l}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         ))}
@@ -94,7 +109,9 @@ export function Footer() {
           <span className={styles.footerCopy}>© 2026 Cometta S.A.S. · Hecho en Colombia.</span>
           <div className={styles.footerBarLinks}>
             <a href="#" className={styles.footerBarLink}>Términos</a>
-            <a href="#" className={styles.footerBarLink}>Privacidad</a>
+            <Link href="/politica-de-privacidad" className={styles.footerBarLink}>
+              Privacidad
+            </Link>
             <a href="#" className={styles.footerBarLink}>Cookies</a>
           </div>
         </div>
